@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hóa Đơn</title>
+
+    <link rel="icon" href="{{ asset('./print/img/logoDN.png') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('./print/css/bootstrap.min.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('./print/css/style.css') }}">
+    <style>
+      @font-face {
+            font-family: 'Oswald';
+            
+            src: url({{ asset('print/fonts/Oswald-Regular.ttf') }}) format('truetype'),
+            url({{ asset('print/fonts/Oswald-Light.ttf') }}) format('truetype'),
+            url({{ asset('print/fonts/Oswald-Regular.ttf') }}) format('truetype'),
+            url({{ asset('print/fonts/Oswald-ExtraLight.ttf') }}) format('truetype');
+        }
+
+        table {
+            width: 80%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 0px 10px;
+        }
+
+        .title {
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body style="font-family:Oswald !important">
+    <div class="page">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <img class="img-fluid" src="{{ asset('./print/img/logoDN.png') }}" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h1 style="font-weight: 900;">Doanh Thu</h1>
+                    <p>Thời gian: Từ <strong> {{ $DateTimeBefore }} </strong> đến
+                        <strong>{{ $DateTimeAfter }}</strong>
+                    </p>
+                    <p>Liên 1: Lưu</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Mẫu số: </h5>
+                    <p>Ký hiệu: </p>
+                    <p>Số: </p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <p><strong>Đơn vị bán hàng:</strong><span class="viethoa">Công ty TNHH Thương mại và dịch vụ thiết bị DN
+                    Phone</span></p>
+            <p><strong>Mã số thuế:</strong><span></span></p>
+            <p><strong>Địa chỉ:</strong><span>Quán Gánh ,Nhị Khê ,Thường Tín ,Hà Nội , Việt Nam</span></p>
+            <p><strong>Điện thoại:</strong><span>0399574700</span></p>
+            <p><strong>Số tài khoản</strong><span>19910000748627 tại Ngân hàng BIDV Hồng Hà Hà Nội</span></p>
+            <div class="gach"></div>
+            <div class="gach mgb-10"></div>
+            <table class="table table-bordered" style="border">
+                <thead>
+                    <tr>
+                        <th scope="col">STT</th>
+                        <th scope="col">Mã Hóa đơn</th>
+                        <th scope="col">Mã Sản Phẩm</th>
+                        <th scope="col">Tên Sản Phẩm</th>
+                        <th scope="col">Số Lượng</th>
+                        <th scope="col">Giá Bán</th>
+                        <th scope="col">Thanh Toán</th>
+                        <th scope="col">Thời Gian</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @php
+                        $totalProduct = 0;
+                    @endphp
+                    @foreach ($products as $key => $product)
+                        <tr>
+                            <td scope="row">{{ $key + 1 }}</td>
+                            <td>{{ $product->order_id }}</td>
+                            <td>{{ $product->product_id }}</td>
+                            <td>{{ $product->product_name }}</td>
+                            <td>{{ $product->product_qty }}</td>
+                            <td>{{ $product->product_discount }}</td>
+                            <td class="text-right">
+                                {{ $product->product_qty * floatval(implode(explode(',', $product->product_discount))) }}
+                                vnđ</td>
+                            @php
+                                $totalProduct += $product->product_qty * floatval(implode(explode(',', $product->product_discount)));
+                            @endphp
+                            <td class="text-right">{{ $product->created_at }}</td>
+                        <tr>
+                    @endforeach
+                    <td colspan="6">Tổng Doanh thu</td>
+                    <td colspan="2">{{ number_format($totalProduct) }} vnđ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer" style="margin-top:50px; width: 800px">
+            <table style="border: none">
+                <tr style="border: none">
+                    <td style="border: none; width: 300px;">
+
+                    </td>
+                    <td style="border: none">
+
+                    </td>
+                    <td style="border: none">
+                        <div class="col-md-4 text-center">
+                            <p>Ngày..... tháng..... năm 20....</p>
+                            <strong>Người Lập Báo Cáo</strong>
+                            <p>(Ký, ghi rõ họ tên)</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

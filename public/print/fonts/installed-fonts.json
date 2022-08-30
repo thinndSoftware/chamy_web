@@ -1,0 +1,11 @@
+{
+    "c:\\users\\asus\\downloads\\oswald\\static\\oswald-bold.ttf": {
+        "normal": "D:\\laragon\\laragon\\www\\web_dienthoai\\vendor\\dompdf\\dompdf\/lib\/fonts\/Oswald-ExtraLight",
+        "bold": "D:\\laragon\\laragon\\www\\web_dienthoai\\vendor\\dompdf\\dompdf\/lib\/fonts\/Oswald-Light",
+        "italic": "D:\\laragon\\laragon\\www\\web_dienthoai\\vendor\\dompdf\\dompdf\/lib\/fonts\/Oswald-Medium",
+        "bold_italic": "D:\\laragon\\laragon\\www\\web_dienthoai\\vendor\\dompdf\\dompdf\/lib\/fonts\/Oswald-Regular"
+    },
+    "oswald": {
+        "normal": "oswald_normal_0821df659f88c4cfa85b1b4590169bf4"
+    }
+}

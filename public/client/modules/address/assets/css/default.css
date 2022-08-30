@@ -1,0 +1,140 @@
+.c-box_root {
+  padding-top: 30px;
+  margin-bottom: 90px; }
+
+.c-title_module {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 45px 0; }
+
+.c-summary {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 40px; }
+
+.c-box_store .c-col_map {
+  padding-right: 30px; }
+.c-box_store .c-col_store {
+  padding-left: 0; }
+
+.c-box_selection {
+  margin-bottom: 30px; }
+  .c-box_selection h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 23px; }
+  .c-box_selection img {
+    margin-right: 20px; }
+  .c-box_selection select {
+    background: transparent;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #E3DDBB; }
+  .c-box_selection .select-aria .select2 {
+    width: 100% !important; }
+    .c-box_selection .select-aria .select2 .selection .select2-selection {
+      background: none;
+      border-radius: 0;
+      outline: none;
+      height: 50px;
+      border: 2px solid #E3DDBB;
+      display: flex; }
+      .c-box_selection .select-aria .select2 .selection .select2-selection .select2-selection__rendered {
+        line-height: 50px;
+        font-size: 16px;
+        padding: 0 45px 0 18px;
+        color: #000;
+        width: 100%; }
+      .c-box_selection .select-aria .select2 .selection .select2-selection .select2-selection__arrow {
+        height: 50px;
+        position: relative;
+        top: 0;
+        right: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+        .c-box_selection .select-aria .select2 .selection .select2-selection .select2-selection__arrow i {
+          font-size: 20px;
+          color: #000; }
+
+.select2-container {
+  z-index: 1; }
+  .select2-container .select2-dropdown {
+    border: 2px solid #E3DDBB;
+    border-radius: 0;
+    background: #F6F3E4; }
+    .select2-container .select2-dropdown .select2-search input {
+      line-height: 50px;
+      padding: 0 18px;
+      outline: none;
+      font-size: 16px;
+      background: #F6F3E4;
+      height: 50px;
+      color: #000; }
+    .select2-container .select2-dropdown .select2-results ::-webkit-scrollbar {
+      display: none; }
+    .select2-container .select2-dropdown .select2-results .select2-results__options {
+      font-size: 16px;
+      color: #000; }
+      .select2-container .select2-dropdown .select2-results .select2-results__options .select2-results__option--disabled {
+        display: none; }
+      .select2-container .select2-dropdown .select2-results .select2-results__options .select2-results__option {
+        text-transform: capitalize;
+        padding: 0 18px;
+        line-height: 50px;
+        cursor: pointer; }
+  .select2-container .select2-dropdown--below {
+    border-top: none; }
+  .select2-container .select2-dropdown--above {
+    border-bottom: none; }
+  .select2-container .select2-results__options {
+    background: #ffffff; }
+
+.c-list_map {
+  border-top: 1px solid #E3DDBB;
+  padding-top: 25px; }
+  .c-list_map ::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 8px;
+    display: block; }
+  .c-list_map ::-webkit-scrollbar-track {
+    background: rgba(227, 221, 187, 0.4);
+    border-radius: 8px; }
+  .c-list_map ::-webkit-scrollbar-thumb {
+    background: #E3DDBB;
+    border-radius: 4px;
+    cursor: pointer; }
+  .c-list_map .list {
+    height: 615px;
+    overflow: auto;
+    padding-right: 30px; }
+    .c-list_map .list .item_map {
+      border-top: 1px solid #E3DDBB;
+      padding: 25px 0; }
+      .c-list_map .list .item_map:first-child {
+        border-top: none;
+        padding-top: 0; }
+    .c-list_map .list .content .title {
+      font-size: 16px; }
+    .c-list_map .list .content p {
+      display: flex;
+      line-height: 26px; }
+      .c-list_map .list .content p span {
+        width: 16px;
+        margin-right: 10px;
+        margin-top: 6px; }
+      .c-list_map .list .content p a {
+        color: #212121; }
+
+@media (max-width: 960px) {
+  .c-box_store .c-col_map {
+    padding-right: 10px;
+    margin-bottom: 30px; }
+
+  .c-box_store .c-col_store {
+    padding-left: 10px; } }
+
+/*# sourceMappingURL=default.css.map */
+
