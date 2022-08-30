@@ -15,9 +15,8 @@ class CreateIntagramsTable extends Migration
     {
         Schema::create('intagrams', function (Blueprint $table) {
             $table->id();
-            $table->string('name',255);
-            $table->string('url',255);
-            $table->integer('active');
+            $table->string('url_intagram');
+            $table->string('image_path');
             $table->timestamps();
         });
     }

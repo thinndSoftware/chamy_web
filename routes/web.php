@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\SendMailController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\IntagramController;
+use App\Http\Controllers\PixcelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,6 +127,14 @@ Route::prefix('/admin')->group(function () {
         Route::get('/edit/{id}', [IntagramController::class, 'edit'])->name('intagrams.edit');
         Route::post('/update/{id}', [IntagramController::class, 'update'])->name('intagrams.update');
         Route::get('/delete/{id}', [IntagramController::class, 'delete'])->name('intagrams.delete');
+    });
+    Route::prefix('/pixcel')->group(function () {
+        Route::get('/', [PixcelController::class, 'index'])->name('pixcel.slider');
+        Route::get('/create', [PixcelController::class, 'create'])->name('pixcel.create');
+        Route::post('/strore', [PixcelController::class, 'store'])->name('pixcel.strore');
+        Route::get('/edit/{id}', [PixcelController::class, 'edit'])->name('pixcel.edit');
+        Route::post('/update/{id}', [PixcelController::class, 'update'])->name('pixcel.update');
+        Route::get('/delete/{id}', [PixcelController::class, 'delete'])->name('pixcel.delete');
     });
     Route::prefix('/setting')->group(function () {
         Route::get('/', [AdminSettingController::class, 'index'])->name('settings.setting')->can('list_setting');

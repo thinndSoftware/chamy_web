@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Intagrams extends Model
 {
     use HasFactory;
+    protected $table = 'intagrams';
+    protected $fillable = ['url_intagram', 'image_path'];
 }

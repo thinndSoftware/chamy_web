@@ -11,5 +11,6 @@ class Slider extends Model
     use HasFactory;
     use SoftDeletes;
     protected $table = 'sliders';
-    protected $fillable = ['name', 'description', 'image_name', 'image_path','name_type'];
+    protected $fillable = ['name', 'description', 'image_name', 'image_path','name_type','active'];
+  
 }

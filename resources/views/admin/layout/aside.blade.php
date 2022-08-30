@@ -63,7 +63,16 @@
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Quản lý Silder</span>
+                    <span class="nav-link-text ms-1">Quản lý Intagram</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ (Route::is('pixcel.slider') || Route::is('pixcel.create') || Route::is('pixcel.edit')|| Route::is('pixcel.delete')) ? 'active bg-gradient-primary' : '' }} "
+                    href="{{ route('pixcel.slider') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Quản lý Pixcel Facebook</span>
                 </a>
             </li>
             <li class="nav-item">
